@@ -1,0 +1,140 @@
+<!-- ******************************************  Question 3  **************************************** -->
+                    <h2 class="h4 mb-1">Are you experiencing difficulty performing daily activities? (ex. Hold a cup, Turn a doorknob)</h2>        
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="followupYes3"  name="followupYesNo3" value="yes">
+                                <label class="cursor-pointer font-italic d-block custom-control-label" for="followupYes3"><p class="mb-0">Yes</p>
+                                </label>
+                            </div>
+                                         
+                                        
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="followupNo3"  name="followupYesNo3" value="no">
+                                <label class="cursor-pointer font-italic d-block custom-control-label" for="followupNo3"><p class="mb-0">No</p>
+                                </label>
+                            </div>
+
+
+                            <div id="pain_scale3">
+                                <div class="card shadow border-0 mb-5">
+                                    <div class="card-body p-5">
+                                        <h2 class="h4 mb-1">From a scale of 1-10, how much discomfort are you experiencing?</h2>
+                                        <ul class="list-group">
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_mild3" type="radio"  value="Mild" name="painscale">
+                                                    <label class="custom-control-label" for="followup_mild3">
+                                                        <p class="mb-0">1 - 2</p><span class="small font-italic text-muted">Mild Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_mild3"><img src="../../static/main/index/assets/img/mild.JPG" alt="" width="60"></label>
+                                            </li>
+                            
+                                            <li class="list-group-item d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_moderate3" type="radio" value="Moderate" name="painscale">
+                                                    <label class="custom-control-label" for="followup_moderate3">
+                                                        <p class="mb-0">3 - 5</p><span class="small font-italic text-muted">Moderate Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_moderate3"><img src="../../static/main/index/assets/img/moderate.JPG" alt="" width="60"></label>
+                                            </li>
+                            
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_severe3" type="radio"  value="Severe" name="painscale">
+                                                    <label class="custom-control-label" for="followup_severe3">
+                                                        <p class="mb-0">6 - 8</p><span class="small font-italic text-muted">Severe Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_severe3"><img src="../../static/main/index/assets/img/severe.JPG" alt="" width="60"></label>
+                                            </li>
+                            
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_worst3" type="radio"  value="Very_Severe" name="painscale">
+                                                    <label class="custom-control-label" for="followup_worst3">
+                                                        <p class="mb-0">9 - 10</p><span class="small font-italic text-muted">Very Severe Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_worst3"><img src="../../static/main/index/assets/img/very_severe.JPG" alt="" width="60"></label>
+                                            </li>
+                                        </ul>
+                                        <button type="Submit" class="btn btn-primary btn-block" id="submitYes3">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <script type="text/javascript">
+                                $(document).ready(function()
+                                {   
+                                    $('#pain_scale3').hide();
+                                    $('#submitNo3').hide();
+                                    $('#submitYes3').hide();
+                                
+                                    $('#followupYes3').change(function()
+                                    {
+                                        if($('#followupYes3').is(':checked'))
+                                        {
+                                            $('#pain_scale3').fadeIn('slow');
+                                            $('#submitNo3').fadeOut('slow');
+                                            
+                                        }
+                                        else if($('#followupNo3').is(':checked'))
+                                        {
+                                            $('#pain_scale3').fadeOut('slow');
+                                            $('#submitNo3').fadeIn('slow');
+                                        }
+                                        else{
+                                            $('#pain_scale3').fadeOut('slow');
+                                            $('#submitNo3').fadeIn('slow');
+                                        }
+                                    });
+                                
+                                    $('#followupNo3').change(function()
+                                    {
+                                        if($('#followupNo3').is(':checked'))
+                                        {
+                                            $('#pain_scale3').fadeOut('slow');
+                                            $('#submitNo3').fadeIn('slow');
+                                        }
+                                
+                                    });
+                                
+                                    $('#followup_mild3').change(function()
+                                    {
+                                        if($('#followup_mild3').is(':checked'))
+                                        {
+                                            $('#submitYes3').fadeIn('slow');
+                                        }
+                                    });
+                                
+                                    $('#followup_moderate3').change(function()
+                                    {
+                                        if($('#followup_moderate3').is(':checked'))
+                                        {
+                                            $('#submitYes3').fadeIn('slow');
+                                        }
+                                    });
+                                
+                                    $('#followup_severe3').change(function()
+                                    {
+                                        if($('#followup_severe3').is(':checked'))
+                                        {
+                                            $('#submitYes3').fadeIn('slow');
+                                        }
+                                    });
+                                
+                                    $('#followup_worst3').change(function()
+                                    {
+                                        if($('#followup_worst3').is(':checked'))
+                                        {
+                                            $('#submitYes3').fadeIn('slow');
+                                        }
+                                    });
+                                
+                                    
+                                
+                                });
+                                    </script>
+<!-- ******************************************  Question 3  **************************************** -->

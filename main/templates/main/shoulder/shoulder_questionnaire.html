@@ -1,0 +1,197 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ClickCare Shoulder Questionnaire</title>
+    <link rel="stylesheet" type = "text/css" href="{% static 'main/questionnaire.css' %}">
+
+</head>
+
+<body>
+    <form method="POST" name="abstract">
+        {%csrf_token%}
+
+        <ul>
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="shoulder_question_1">
+                        <h3>Are you experiencing dull ache in the shoulder?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="shoulder_question_1" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="shoulder_question_1" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="shoulder_question_2">
+                        <h3>Are you experiencing difficulty performing daily activities (ex. Lifting, Reaching movements)</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="shoulder_question_2" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="shoulder_question_2" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="shoulder_question_3">
+                        <h3>Are you experiencing arm weakness?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="shoulder_question_3" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="shoulder_question_3" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+            
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="shoulder_question_4">
+                        <h3>Are you experiencing loss of strength, mobility and motion?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="shoulder_question_4" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="shoulder_question_4" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="shoulder_question_5">
+                        <h3>Are you experiencing stiffness of the affected shoulder joint?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="shoulder_question_5" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="shoulder_question_5" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+            
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    ;<abbr title="shoulder_question_6">
+                        <h3>Are you experiencing disturbed sleep? (pain at night)</h3>
+                    </abbr>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="shoulder_question_6" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="shoulder_question_6" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="shoulder_question_7">
+                        <h3>Are you experiencing clicking or crackling sound?</h3>
+                    </label> 
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="shoulder_question_7" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="shoulder_question_7" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="shoulder_question_8">
+                        <h3>Are you experiencing instability in the affected shoulder? (sensation that the shoulder is catching)</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="shoulder_question_8" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="shoulder_question_8" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="shoulder_question_9"></label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="shoulder_question_9" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="shoulder_question_9" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="shoulder_question_10"></label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="shoulder_question_10" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="shoulder_question_10" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="shoulder_question_11"></label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="shoulder_question_11" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="shoulder_question_11" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+        </ul>
+
+    <div>
+        <input class="proceed" type="submit" value="Submit" name="proceed" data-aos="zoom-in">
+    </div>
+    
+    </form>
+
+</body>
+{%  endblock %}
+</html>

@@ -1,0 +1,219 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ClickCare Neck Questionnaire</title>
+    <link rel="stylesheet" type = "text/css" href="{% static 'main/questionnaire.css' %}">
+    
+</head>
+
+<body>
+    <form method="POST" name="abstract">
+        {%csrf_token%}
+
+        <ul>
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="neck_question_1">
+                        <h3>Are you experiencing neck stiffness? (Pain and Difficulty moving or turning your head)?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="neck_question_1" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="neck_question_1" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="neck_question_2">
+                        <h3>Do you have muscle pain, aches, and soreness? (Pain in the upper back and shoulders)</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="neck_question_2" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="neck_question_2" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="neck_question_3">
+                        <h3>Do you have muscle spasms? (neck muscles)</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="neck_question_3" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="neck_question_3" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+            
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="neck_question_4">
+                        <h3>Do you feel weakness, tingling and numbness in your hands and legs?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="neck_question_4" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="neck_question_4" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="neck_question_5">
+                        <h3>Does your head remain tilted to one side?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="neck_question_5" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="neck_question_5" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+            
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="neck_question_6">
+                        <h3>Do you experience difficulty walking?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="neck_question_6" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="neck_question_6" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="neck_question_7">
+                        <h3>Are you experiencing grinding sensation when turning your neck? (popping, clicking)</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="neck_question_7" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="neck_question_7" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="neck_question_8">
+                        <h3>Are you experiencing swelling and bruising at the back of the neck?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="neck_question_8" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="neck_question_8" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="neck_question_9">
+                        <h3>Do you have muscle pain, aches, and soreness? (Pain in the upper back and shoulders)</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="neck_question_9" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="neck_question_9" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="neck_question_10">
+                        <h3>Do you feel weakness, tingling and numbness in your hands and legs?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="neck_question_10" value = "0" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="neck_question_10" value = "1" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="neck_question_11">
+                        <h3>Are you experiencing difficulty breathing?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="neck_question_11" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="neck_question_11" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="neck_question_12">
+                        <h3>Are you experiencing paralysis of the arms and legs?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="neck_question_12" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="neck_question_12" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+        </ul>
+
+    <div>
+        <input class="proceed" type="submit" value="Submit" name="proceed" data-aos="zoom-in">
+    </div>
+    
+    </form>
+
+</body>
+{% endblock %}
+</html>

@@ -1,0 +1,167 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ClickCare Wrist Questionnaire</title>
+        <link rel="stylesheet" type = "text/css" href="{% static 'main/questionnaire.css' %}">
+    </head>
+
+<body>
+    <form method="POST" name="abstract">
+        {%csrf_token%}
+        <ul>
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="wrist_question_1">
+                        <h3>Are you experiencing weakness on the affected arm?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="wrist_question_1" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="wrist_question_1" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="wrist_question_2">
+                        <h3>Is there any swelling and bruising on the affected arm?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="wrist_question_2" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="wrist_question_2" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="wrist_question_3">
+                        <h3>Is the pain radiates in the base of your thumb?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="wrist_question_3" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="wrist_question_3" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+            
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="wrist_question_4">
+                        <h3>Are you experiencing difficulty moving your thumb?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="wrist_question_4" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="wrist_question_4" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="wrist_question_5">
+                        <h3>Are you experiencing loss of motion on the affected wrist?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="wrist_question_5" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="wrist_question_5" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+            
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="wrist_question_6">
+                        <h3>Is there any popping sensation or tearing in the wrist?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="wrist_question_6" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="wrist_question_6" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="wrist_question_7">
+                        <h3>Are you experiencing swelling and bruising on your wrist?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="wrist_question_7" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="wrist_question_7" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="wrist_question_8">
+                        <h3>Are you experiencing numbness and severe pain in your wrist?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="wrist_question_8" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="wrist_question_8" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="questions" data-aos="zoom-in">
+                    <label for="wrist_question_9">
+                        <h3>Do you see or feel any deformity in the affected wrist?</h3>
+                    </label>
+                </div>
+
+                <div class="choices" data-aos="zoom-in">
+                    <input type="radio" name="wrist_question_9" value = "1" required>
+                    <label for="choice_yes">Yes/Oo</label>
+                    <input type="radio" name="wrist_question_9" value = "0" required>
+                    <label for="choice_no">No/Hindi</label>
+                </div>
+            </li>
+            
+        </ul>
+
+    <div>
+        <input class="proceed" type="submit" value="Submit" name="proceed" data-aos="zoom-in">
+    </div>
+
+    </form>
+</body>
+{% endblock %}
+</html>

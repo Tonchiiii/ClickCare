@@ -1,0 +1,65 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ClickCare Pain Scale</title>
+
+    <link rel="stylesheet" type = "text/css" href="{% static 'main/questionnaire.css' %}">
+
+</head>
+
+<body>
+    <div class="questionnaire" data-aos="zoom-in">
+        <h1>PAIN SCALE</h1>
+        <h3>Tell us more about your discomfort through this pain scale below.</h3>
+    </div>
+
+    <hr>
+    <form method="POST" name="abstract">
+        {%csrf_token%}      
+            <div class = "pain_scale" data-aos="zoom-in"> 
+                <label for="scale">
+                    <img src="{% static 'main/index/assets/img/scale.jpg' %}">
+                </label>
+            </div>
+
+            <br><br>
+
+            <div class="choices" data-aos="zoom-in">
+                <input type="image" name="question_1" value = "mild">
+                <label for="choice_a">
+                    <a href="{% url 'main-elbow_questionnaire_2' %}">
+                        <img src="{% static 'main/index/assets/img/mild.jpg' %}">
+                    </a>
+                </label>
+                <input type="image" name="question_1" value = "moderate">
+                <label for="choice_b">
+                    <a href="{% url 'main-elbow_questionnaire_2' %}">
+                        <img src="{% static 'main/index/assets/img/moderate.jpg' %}">
+                    </a>
+                </label>
+                <input type="image" name="question_1" value = "severe">
+                <label for="choice_c">
+                    <a href="{% url 'main-elbow_questionnaire_2' %}">
+                        <img src="{% static 'main/index/assets/img/severe.jpg' %}">
+                    </a>
+                </label>
+                <input type="image" name="question_1" value ="very_severe">
+                <label for="choice_d">
+                    <a href="{% url 'main-elbow_questionnaire_2' %}">
+                        <img src="{% static 'main/index/assets/img/severe.jpg' %}">
+                    </a>
+                </label>
+                <input type="image" name="question_1" value="worst">
+                <label for="choice_e">
+                    <a href="{% url 'main-elbow_questionnaire_2' %}">
+                        <img src="{% static 'main/index/assets/img/severe.jpg' %}" alt="">
+                    </a>    
+                </label>
+            </div>
+    </form>
+</body>
+</html>
+{% endblock %}
