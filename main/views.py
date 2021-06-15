@@ -5,6 +5,9 @@ from .models import Record
 def home(request):
     return render(request, 'main/home.html')
 
+def index(request):
+    return render(request, 'main/index -clickcare.html')
+
 def checkup(request):
     return render(request, 'main/checkup.html')
 
