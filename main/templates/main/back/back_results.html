@@ -16,25 +16,80 @@
     <div class="container">
         <div class="jumbotron text-center">
         <h1>Results</h1>
-        <p>It is possible that you may be diagnosed with:</p> 
+        <p>It is possible that you may be diagnosed with:</p>
+
         {% if first == 'Thoracic (Upper Back) Strain' %}
+
+            {% if back_scoreA > 0 and back_scoreA <= 25 %}
             <br>
-            <p>{{ first }} = {{ back_scoreA }}%</p>
+            <p>Mild {{ first }}</p>
+            {% elif back_scoreA > 25 and back_scoreA <= 50 %}
+            <br>
+            <p>Moderate {{ first }}</p>
+            {% elif back_scoreA > 50 and back_scoreA <= 75 %}
+            <br>
+            <p>Severe {{ first }}</p>
+            {% elif back_scoreA > 75 and back_scoreA <= 100 %}
+            <br>
+            <p>Very Severe {{ first }}</p>
+            {% endif %}
             
         {% endif %}
+
         {% if second == 'Spinal Osteoarthritis' %}
+
+            {% if back_scoreB > 0 and back_scoreB <= 25 %}
             <br>
-            <p>{{ second }} = {{ back_scoreB }}%</p>
-        {% endif %}
-        {% if third == 'Scoliosis' %}
+            <p>Mild {{ second }}</p>
+            {% elif back_scoreB > 25 and back_scoreB <= 50 %}
             <br>
-            <p>{{ third }} = {{ back_scoreC }}%</p>
-        {% endif %}
-        {% if fourth == 'Sciatica' %}
+            <p>Moderate {{ second }}</p>
+            {% elif back_scoreB > 50 and back_scoreB <= 75 %}
             <br>
-            <p>{{ fourth }} = {{ back_scoreD }}%</p>
+            <p>Severe {{ second }}</p>
+            {% elif back_scoreB > 75 and back_scoreB <= 100 %}
+            <br>
+            <p>Very Severe {{ second }}</p>
+            {% endif %}
+            
         {% endif %}
 
+        {% if third == 'Scoliosis' %}
+
+            {% if back_scoreC > 0 and back_scoreC <= 25 %}
+            <br>
+            <p>Mild {{ third }}</p>
+            {% elif back_scoreC > 25 and back_scoreC <= 50 %}
+            <br>
+            <p>Moderate {{ third }}</p>
+            {% elif back_scoreC > 50 and back_scoreC <= 75 %}
+            <br>
+            <p>Severe {{ third }}</p>
+            {% elif back_scoreC > 75 and back_scoreC <= 100 %}
+            <br>
+            <p>Very Severe {{ third }}</p>
+            {% endif %}
+            
+        {% endif %}
+
+        {% if fourth == 'Sciatica' %}
+
+            {% if back_scoreD > 0 and back_scoreD <= 25 %}
+            <br>
+            <p>Mild {{ fourth }}</p>
+            {% elif back_scoreD > 25 and back_scoreD <= 50 %}
+            <br>
+            <p>Moderate {{ fourth }}</p>
+            {% elif back_scoreD > 50 and back_scoreD <= 75 %}
+            <br>
+            <p>Severe {{ fourth }}</p>
+            {% elif back_scoreD > 75 and back_scoreD <= 100 %}
+            <br>
+            <p>Very Severe {{ fourth }}</p>
+            {% endif %}
+            
+        {% endif %}
+        
       </div>
     </div>
 

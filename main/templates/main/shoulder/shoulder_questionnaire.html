@@ -1,197 +1,1408 @@
-{% extends "main/base.html" %}
 {% load static %}
-{% block content %}
+
 <!DOCTYPE html>
 <html>
-<head>
-    <title>ClickCare Shoulder Questionnaire</title>
-    <link rel="stylesheet" type = "text/css" href="{% static 'main/questionnaire.css' %}">
 
-</head>
-
-<body>
-    <form method="POST" name="abstract">
-        {%csrf_token%}
-
-        <ul>
-
-            <li>
-                <div class="questions" data-aos="zoom-in">
-                    <label for="shoulder_question_1">
-                        <h3>Are you experiencing dull ache in the shoulder?</h3>
-                    </label>
-                </div>
-
-                <div class="choices" data-aos="zoom-in">
-                    <input type="radio" name="shoulder_question_1" value = "1" required>
-                    <label for="choice_yes">Yes/Oo</label>
-                    <input type="radio" name="shoulder_question_1" value = "0" required>
-                    <label for="choice_no">No/Hindi</label>
-                </div>
-            </li>
-
-
-            <li>
-                <div class="questions" data-aos="zoom-in">
-                    <label for="shoulder_question_2">
-                        <h3>Are you experiencing difficulty performing daily activities (ex. Lifting, Reaching movements)</h3>
-                    </label>
-                </div>
-
-                <div class="choices" data-aos="zoom-in">
-                    <input type="radio" name="shoulder_question_2" value = "1" required>
-                    <label for="choice_yes">Yes/Oo</label>
-                    <input type="radio" name="shoulder_question_2" value = "0" required>
-                    <label for="choice_no">No/Hindi</label>
-                </div>
-            </li>
-
-
-            <li>
-                <div class="questions" data-aos="zoom-in">
-                    <label for="shoulder_question_3">
-                        <h3>Are you experiencing arm weakness?</h3>
-                    </label>
-                </div>
-
-                <div class="choices" data-aos="zoom-in">
-                    <input type="radio" name="shoulder_question_3" value = "1" required>
-                    <label for="choice_yes">Yes/Oo</label>
-                    <input type="radio" name="shoulder_question_3" value = "0" required>
-                    <label for="choice_no">No/Hindi</label>
-                </div>
-            </li>
-            
-
-            <li>
-                <div class="questions" data-aos="zoom-in">
-                    <label for="shoulder_question_4">
-                        <h3>Are you experiencing loss of strength, mobility and motion?</h3>
-                    </label>
-                </div>
-
-                <div class="choices" data-aos="zoom-in">
-                    <input type="radio" name="shoulder_question_4" value = "1" required>
-                    <label for="choice_yes">Yes/Oo</label>
-                    <input type="radio" name="shoulder_question_4" value = "0" required>
-                    <label for="choice_no">No/Hindi</label>
-                </div>
-            </li>
-
-
-            <li>
-                <div class="questions" data-aos="zoom-in">
-                    <label for="shoulder_question_5">
-                        <h3>Are you experiencing stiffness of the affected shoulder joint?</h3>
-                    </label>
-                </div>
-
-                <div class="choices" data-aos="zoom-in">
-                    <input type="radio" name="shoulder_question_5" value = "1" required>
-                    <label for="choice_yes">Yes/Oo</label>
-                    <input type="radio" name="shoulder_question_5" value = "0" required>
-                    <label for="choice_no">No/Hindi</label>
-                </div>
-            </li>
-            
-
-            <li>
-                <div class="questions" data-aos="zoom-in">
-                    ;<abbr title="shoulder_question_6">
-                        <h3>Are you experiencing disturbed sleep? (pain at night)</h3>
-                    </abbr>
-                </div>
-
-                <div class="choices" data-aos="zoom-in">
-                    <input type="radio" name="shoulder_question_6" value = "1" required>
-                    <label for="choice_yes">Yes/Oo</label>
-                    <input type="radio" name="shoulder_question_6" value = "0" required>
-                    <label for="choice_no">No/Hindi</label>
-                </div>
-            </li>
-
-
-            <li>
-                <div class="questions" data-aos="zoom-in">
-                    <label for="shoulder_question_7">
-                        <h3>Are you experiencing clicking or crackling sound?</h3>
-                    </label> 
-                </div>
-
-                <div class="choices" data-aos="zoom-in">
-                    <input type="radio" name="shoulder_question_7" value = "1" required>
-                    <label for="choice_yes">Yes/Oo</label>
-                    <input type="radio" name="shoulder_question_7" value = "0" required>
-                    <label for="choice_no">No/Hindi</label>
-                </div>
-            </li>
-
-
-            <li>
-                <div class="questions" data-aos="zoom-in">
-                    <label for="shoulder_question_8">
-                        <h3>Are you experiencing instability in the affected shoulder? (sensation that the shoulder is catching)</h3>
-                    </label>
-                </div>
-
-                <div class="choices" data-aos="zoom-in">
-                    <input type="radio" name="shoulder_question_8" value = "1" required>
-                    <label for="choice_yes">Yes/Oo</label>
-                    <input type="radio" name="shoulder_question_8" value = "0" required>
-                    <label for="choice_no">No/Hindi</label>
-                </div>
-            </li>
-
-
-            <li>
-                <div class="questions" data-aos="zoom-in">
-                    <label for="shoulder_question_9"></label>
-                </div>
-
-                <div class="choices" data-aos="zoom-in">
-                    <input type="radio" name="shoulder_question_9" value = "1" required>
-                    <label for="choice_yes">Yes/Oo</label>
-                    <input type="radio" name="shoulder_question_9" value = "0" required>
-                    <label for="choice_no">No/Hindi</label>
-                </div>
-            </li>
-
-
-            <li>
-                <div class="questions" data-aos="zoom-in">
-                    <label for="shoulder_question_10"></label>
-                </div>
-
-                <div class="choices" data-aos="zoom-in">
-                    <input type="radio" name="shoulder_question_10" value = "1" required>
-                    <label for="choice_yes">Yes/Oo</label>
-                    <input type="radio" name="shoulder_question_10" value = "0" required>
-                    <label for="choice_no">No/Hindi</label>
-                </div>
-            </li>
-
-
-            <li>
-                <div class="questions" data-aos="zoom-in">
-                    <label for="shoulder_question_11"></label>
-                </div>
-
-                <div class="choices" data-aos="zoom-in">
-                    <input type="radio" name="shoulder_question_11" value = "1" required>
-                    <label for="choice_yes">Yes/Oo</label>
-                    <input type="radio" name="shoulder_question_11" value = "0" required>
-                    <label for="choice_no">No/Hindi</label>
-                </div>
-            </li>
-
-        </ul>
-
-    <div>
-        <input class="proceed" type="submit" value="Submit" name="proceed" data-aos="zoom-in">
-    </div>
+    <head>
+        <title>ClickCare Shoulder Questionnaire</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+                integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+                crossorigin="anonymous">
+        </script>
+        <script src="jquery.nice-number.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="{% static 'main/index/assets/css/menu.css' %}" rel="stylesheet">
+        <link href="{% static 'main/index/assets/gijgo.min.css' %}" rel="stylesheet">
+        <link href="jquery.nice-number.css" rel="stylesheet">
     
-    </form>
+    </head>
 
-</body>
-{%  endblock %}
+    <section class="py-5 header text-center text-white">
+        <div class="container pt-4">
+            <header>
+                <h1 class="display-4">CLICKCARE SHOULDER QUESTIONNAIRE</h1>
+            </header>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 mx-auto">
+                <form method="POST" action="">
+                    {% csrf_token %}
+
+<!-- ******************************************  Question 1  **************************************** -->
+                    <div class="shoulder_questions">
+                        <label for="shoulder_questions1">
+                        <h2 class="h4 mb-1">Are you experiencing dull ache in the shoulder?</h2>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="followupYes1"  name="shoulder_questions1" value="1" required>
+                            <label class="cursor-pointer font-italic d-block custom-control-label" for="followupYes1"><p class="mb-0">Yes</p>
+                            </label>
+                        </div>
+                            
+                            
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="followupNo1"  name="shoulder_questions1" value="0">
+                            <label class="cursor-pointer font-italic d-block custom-control-label" for="followupNo1"><p class="mb-0">No</p>
+                            </label>
+                        </div>
+                        </label>
+                    </div>
+
+
+                    <div class="painscale">
+                        <label for="painscale1">
+                            <div id="painscale1">
+                                <div class="card shadow border-0 mb-5">
+                                    <div class="card-body p-5">
+                                        <h2 class="h4 mb-1">From a scale of 1-10, how much discomfort are you experiencing?</h2>
+                                        <ul class="list-group">
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_mild1" type="radio"  value="25" name="painscale1">
+                                                    <label class="custom-control-label" for="followup_mild1">
+                                                        <p class="mb-0">1 - 2</p><span class="small font-italic text-muted">Mild Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_mild1"><img src="../../static/main/index/assets/img/mild.JPG" alt="" width="60"></label>
+                                            </li>
+                            
+                                            <li class="list-group-item d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_moderate1" type="radio" value="50" name="painscale1">
+                                                    <label class="custom-control-label" for="followup_moderate1">
+                                                        <p class="mb-0">3 - 5</p><span class="small font-italic text-muted">Moderate Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_moderate1"><img src="../../static/main/index/assets/img/moderate.JPG" alt="" width="60"></label>
+                                            </li>
+                            
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_severe1" type="radio"  value="75" name="painscale1">
+                                                    <label class="custom-control-label" for="followup_severe1">
+                                                        <p class="mb-0">6 - 8</p><span class="small font-italic text-muted">Severe Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_severe1"><img src="../../static/main/index/assets/img/severe.JPG" alt="" width="60"></label>
+                                            </li>
+                            
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_very_severe1" type="radio"  value="100" name="painscale1">
+                                                    <label class="custom-control-label" for="followup_very_severe1">
+                                                        <p class="mb-0">9 - 10</p><span class="small font-italic text-muted">Very Severe Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_very_severe1"><img src="../../static/main/index/assets/img/very_severe.JPG" alt="" width="60"></label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+
+                        <script type="text/javascript">
+                            $(document).ready(function()
+                            {   
+                                $('#painscale1').hide();
+                                $('#submitNo').hide();
+                                
+                                $('#followupYes1').change(function()
+                                {
+                                    if($('#followupYes1').is(':checked'))
+                                    {
+                                        $('#painscale1').attr('required', true);  
+                                        $('#painscale1').fadeIn('slow');                                        
+                                    }
+                                    
+                                    else{
+                                        $('#painscale1').attr('required', false);
+                                        $('#painscale1').fadeOut('slow');
+                                    }
+                                });
+
+                                $('#followupNo1').change(function()
+                                {
+                                    if($('#followupNo1').is(':checked'))
+                                    {
+                                        $('#painscale1').attr('required', false);
+                                        $('#painscale1').fadeOut('slow');                                        
+                                        
+                                    }
+                                });         
+                            
+                            });
+                                </script>
+
+                                <br><br><br>
+<!-- ******************************************  Question 1  **************************************** -->
+
+
+
+
+<!-- ******************************************  Question 2  **************************************** -->
+                        <div class="shoulder_questions">
+                            <label for="shoulder_questions2">
+                            <h2 class="h4 mb-1">Are you experiencing difficulty performing daily activities (ex. Lifting, Reaching movements)</h2>        
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="followupYes2"  name="shoulder_questions2" value="1" required>
+                                <label class="cursor-pointer font-italic d-block custom-control-label" for="followupYes2"><p class="mb-0">Yes</p>
+                                </label>
+                            </div>
+                                         
+                                        
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="followupNo2"  name="shoulder_questions2" value="0">
+                                <label class="cursor-pointer font-italic d-block custom-control-label" for="followupNo2"><p class="mb-0">No</p>
+                                </label>
+                            </div>
+                            </label>
+                        </div>
+
+
+                        <div class="painscale">
+                            <label for="painscale2">
+                                <div id="painscale2">
+                                    <div class="card shadow border-0 mb-5">
+                                        <div class="card-body p-5">
+                                            <h2 class="h4 mb-1">From a scale of 1-10, how much discomfort are you experiencing?</h2>
+                                            <ul class="list-group">
+                                                <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                    <div class="custom-control custom-radio">
+                                                        <input class="custom-control-input" id="followup_mild2" type="radio"  value="25" name="painscale2">
+                                                        <label class="custom-control-label" for="followup_mild2">
+                                                            <p class="mb-0">1 - 2</p><span class="small font-italic text-muted">Mild Pain</span>
+                                                        </label>
+                                                    </div>
+                                                    <label for="followup_mild2"><img src="../../static/main/index/assets/img/mild.JPG" alt="" width="60"></label>
+                                                </li>
+                                
+                                                <li class="list-group-item d-flex align-items-center justify-content-between">
+                                                    <div class="custom-control custom-radio">
+                                                        <input class="custom-control-input" id="followup_moderate2" type="radio" value="50" name="painscale2">
+                                                        <label class="custom-control-label" for="followup_moderate2">
+                                                            <p class="mb-0">3 - 5</p><span class="small font-italic text-muted">Moderate Pain</span>
+                                                        </label>
+                                                    </div>
+                                                    <label for="followup_moderate2"><img src="../../static/main/index/assets/img/moderate.JPG" alt="" width="60"></label>
+                                                </li>
+                                
+                                                <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                    <div class="custom-control custom-radio">
+                                                        <input class="custom-control-input" id="followup_severe2" type="radio"  value="75" name="painscale2">
+                                                        <label class="custom-control-label" for="followup_severe2">
+                                                            <p class="mb-0">6 - 8</p><span class="small font-italic text-muted">Severe Pain</span>
+                                                        </label>
+                                                    </div>
+                                                    <label for="followup_severe2"><img src="../../static/main/index/assets/img/severe.JPG" alt="" width="60"></label>
+                                                </li>
+                                
+                                                <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                    <div class="custom-control custom-radio">
+                                                        <input class="custom-control-input" id="followup_very_severe2" type="radio"  value="100" name="painscale2">
+                                                        <label class="custom-control-label" for="followup_very_severe2">
+                                                            <p class="mb-0">9 - 10</p><span class="small font-italic text-muted">Very Severe Pain</span>
+                                                        </label>
+                                                    </div>
+                                                    <label for="followup_very_severe2"><img src="../../static/main/index/assets/img/very_severe.JPG" alt="" width="60"></label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+
+
+                        <script type="text/javascript">
+                            $(document).ready(function()
+                            {   
+                                $('#painscale2').hide();
+                                $('#submitNo').hide();
+                            
+                                $('#followupYes2').change(function()
+                                {
+                                    if($('#followupYes2').is(':checked'))
+                                    {
+                                        $('#painscale2').attr('required', true); 
+                                        $('#painscale2').fadeIn('slow');
+                                        
+                                    }
+                                    
+                                    else{
+                                        $('#painscale2').attr('required', false); 
+                                        $('#painscale2').fadeOut('slow');
+                                    }
+
+                                });
+
+                                $('#followupNo2').change(function()
+                                {
+                                    if($('#followupNo2').is(':checked'))
+                                    {
+                                        $('#painscale2').attr('required', false);
+                                        $('#painscale2').fadeOut('slow');                                        
+                                        
+                                    }
+                                });  
+
+                            });
+                                </script>
+
+                                    <br><br><br>
+<!-- ******************************************  Question 2  **************************************** -->
+
+
+
+<!-- ******************************************  Question 3  **************************************** -->
+                    <div class="shoulder_questions">
+                        <label for="shoulder_questions3">
+                        <h2 class="h4 mb-1">Are you experiencing arm weakness?</h2>        
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="followupYes3"  name="shoulder_questions3" value="1" required>
+                            <label class="cursor-pointer font-italic d-block custom-control-label" for="followupYes3"><p class="mb-0">Yes</p>
+                            </label>
+                        </div>
+                                    
+                                    
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="followupNo3"  name="shoulder_questions3" value="0">
+                            <label class="cursor-pointer font-italic d-block custom-control-label" for="followupNo3"><p class="mb-0">No</p>
+                            </label>
+                        </div>
+                        </label>
+                    </div>
+
+
+                    <div class="painscale">
+                        <label for="painscale3">
+                            <div id="painscale3">
+                                <div class="card shadow border-0 mb-5">
+                                    <div class="card-body p-5">
+                                        <h2 class="h4 mb-1">From a scale of 1-10, how much discomfort are you experiencing?</h2>
+                                        <ul class="list-group">
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_mild3" type="radio"  value="25" name="painscale3">
+                                                    <label class="custom-control-label" for="followup_mild3">
+                                                        <p class="mb-0">1 - 2</p><span class="small font-italic text-muted">Mild Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_mild3"><img src="../../static/main/index/assets/img/mild.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_moderate3" type="radio" value="50" name="painscale3">
+                                                    <label class="custom-control-label" for="followup_moderate3">
+                                                        <p class="mb-0">3 - 5</p><span class="small font-italic text-muted">Moderate Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_moderate3"><img src="../../static/main/index/assets/img/moderate.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_severe3" type="radio"  value="75" name="painscale3">
+                                                    <label class="custom-control-label" for="followup_severe3">
+                                                        <p class="mb-0">6 - 8</p><span class="small font-italic text-muted">Severe Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_severe3"><img src="../../static/main/index/assets/img/severe.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_very_severe3" type="radio"  value="100" name="painscale3">
+                                                    <label class="custom-control-label" for="followup_very_severe3">
+                                                        <p class="mb-0">9 - 10</p><span class="small font-italic text-muted">Very Severe Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_very_severe3"><img src="../../static/main/index/assets/img/very_severe.JPG" alt="" width="60"></label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+
+                        <script type="text/javascript">
+                            $(document).ready(function()
+                            {   
+                                $('#painscale3').hide();
+                                $('#submitNo').hide();
+                            
+                                $('#followupYes3').change(function()
+                                {
+                                    if($('#followupYes3').is(':checked'))
+                                    {
+                                        $('#painscale3').attr('required', true);
+                                        $('#painscale3').fadeIn('slow');
+                                        
+                                    }
+                                    
+                                    else{
+                                        $('#painscale3').attr('required', false);
+                                        $('#painscale3').fadeOut('slow');
+                                    }
+                                });
+                            
+                                $('#followupNo2').change(function()
+                                {
+                                    if($('#followupNo2').is(':checked'))
+                                    {
+                                        $('#painscale2').attr('required', false);
+                                        $('#painscale2').fadeOut('slow');                                        
+                                        
+                                    }
+                                });  
+
+                            });
+                                </script>
+
+                                <br><br><br>
+<!-- ******************************************  Question 3  **************************************** -->
+
+
+
+
+<!-- ******************************************  Question 4  **************************************** -->
+                    <div class="shoulder_questions">
+                        <label for="shoulder_questions4">
+                        <h2 class="h4 mb-1">4. Are you experiencing loss of strength, mobility and motion?</h2>        
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="followupYes4"  name="shoulder_questions4" value="1" required>
+                            <label class="cursor-pointer font-italic d-block custom-control-label" for="followupYes4"><p class="mb-0">Yes</p>
+                            </label>
+                        </div>
+                                    
+                                    
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="followupNo4"  name="shoulder_questions4" value="0">
+                            <label class="cursor-pointer font-italic d-block custom-control-label" for="followupNo4"><p class="mb-0">No</p>
+                            </label>
+                        </div>
+                        </label>
+                    </div>
+
+
+                    <div class="painscale">
+                        <label for="painscale4">
+                            <div id="painscale4">
+                                <div class="card shadow border-0 mb-5">
+                                    <div class="card-body p-5">
+                                        <h2 class="h4 mb-1">From a scale of 1-10, how much discomfort are you experiencing?</h2>
+                                        <ul class="list-group">
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_mild4" type="radio"  value="25" name="painscale4">
+                                                    <label class="custom-control-label" for="followup_mild4">
+                                                        <p class="mb-0">1 - 2</p><span class="small font-italic text-muted">Mild Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_mild4"><img src="../../static/main/index/assets/img/mild.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_moderate4" type="radio" value="50" name="painscale4">
+                                                    <label class="custom-control-label" for="followup_moderate4">
+                                                        <p class="mb-0">3 - 5</p><span class="small font-italic text-muted">Moderate Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_moderate4"><img src="../../static/main/index/assets/img/moderate.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_severe4" type="radio"  value="75" name="painscale4">
+                                                    <label class="custom-control-label" for="followup_severe4">
+                                                        <p class="mb-0">6 - 8</p><span class="small font-italic text-muted">Severe Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_severe4"><img src="../../static/main/index/assets/img/severe.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_very_severe4" type="radio"  value="100" name="painscale4">
+                                                    <label class="custom-control-label" for="followup_very_severe4">
+                                                        <p class="mb-0">9 - 10</p><span class="small font-italic text-muted">Very Severe Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_very_severe4"><img src="../../static/main/index/assets/img/very_severe.JPG" alt="" width="60"></label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+
+                        <script type="text/javascript">
+                            $(document).ready(function()
+                            {   
+                                $('#painscale4').hide();
+                                $('#submitNo').hide();
+                            
+                                $('#followupYes4').change(function()
+                                {
+                                    if($('#followupYes4').is(':checked'))
+                                    {
+                                        $('#painscale4').attr('required', true);
+                                        $('#painscale4').fadeIn('slow');
+                                        
+                                    }
+                                   
+                                    else{
+                                        $('#painscale4').attr('required', false);
+                                        $('#painscale4').fadeOut('slow');
+                                    }
+                                });
+                            
+                                $('#followupNo4').change(function()
+                                {
+                                    if($('#followupNo4').is(':checked'))
+                                    {
+                                        $('#painscale4').attr('required', false);
+                                        $('#painscale4').fadeOut('slow');
+                                    }
+                            
+                                });
+
+                            });
+                                </script>
+
+
+                                <br><br><br>
+<!-- ******************************************  Question 4  **************************************** -->
+
+
+
+
+<!-- ******************************************  Question 5  **************************************** -->
+                    <div class="shoulder_questions">
+                        <label for="shoulder_questions5">
+                        <h2 class="h4 mb-1">Are you experiencing stiffness of the affected shoulder joint?</h2>        
+                            <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="followupYes5"  name="shoulder_questions5" value="1" required>
+                            <label class="cursor-pointer font-italic d-block custom-control-label" for="followupYes5"><p class="mb-0">Yes</p>
+                            </label>
+                        </div>
+                                
+                                
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="followupNo5"  name="shoulder_questions5" value="0">
+                            <label class="cursor-pointer font-italic d-block custom-control-label" for="followupNo5"><p class="mb-0">No</p>
+                            </label>
+                        </div>
+                        </label>
+                    </div>
+
+
+                <div class="painscale">
+                    <label for="painscale5">
+                        <div id="painscale5">
+                            <div class="card shadow border-0 mb-5">
+                                <div class="card-body p-5">
+                                    <h2 class="h4 mb-1">From a scale of 1-10, how much discomfort are you experiencing?</h2>
+                                    <ul class="list-group">
+                                        <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                            <div class="custom-control custom-radio">
+                                                <input class="custom-control-input" id="followup_mild5" type="radio"  value="25" name="painscale5">
+                                                <label class="custom-control-label" for="followup_mild5">
+                                                    <p class="mb-0">1 - 2</p><span class="small font-italic text-muted">Mild Pain</span>
+                                                </label>
+                                            </div>
+                                            <label for="followup_mild5"><img src="../../static/main/index/assets/img/mild.JPG" alt="" width="60"></label>
+                                        </li>
+
+                                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                                            <div class="custom-control custom-radio">
+                                                <input class="custom-control-input" id="followup_moderate5" type="radio" value="50" name="painscale5">
+                                                <label class="custom-control-label" for="followup_moderate5">
+                                                    <p class="mb-0">3 - 5</p><span class="small font-italic text-muted">Moderate Pain</span>
+                                                </label>
+                                            </div>
+                                            <label for="followup_moderate5"><img src="../../static/main/index/assets/img/moderate.JPG" alt="" width="60"></label>
+                                        </li>
+
+                                        <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                            <div class="custom-control custom-radio">
+                                                <input class="custom-control-input" id="followup_severe5" type="radio"  value="75" name="painscale5">
+                                                <label class="custom-control-label" for="followup_severe5">
+                                                    <p class="mb-0">6 - 8</p><span class="small font-italic text-muted">Severe Pain</span>
+                                                </label>
+                                            </div>
+                                            <label for="followup_severe5"><img src="../../static/main/index/assets/img/severe.JPG" alt="" width="60"></label>
+                                        </li>
+
+                                        <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                            <div class="custom-control custom-radio">
+                                                <input class="custom-control-input" id="followup_very_severe5" type="radio"  value="100" name="painscale5">
+                                                <label class="custom-control-label" for="followup_very_severe5">
+                                                    <p class="mb-0">9 - 10</p><span class="small font-italic text-muted">Very Severe Pain</span>
+                                                </label>
+                                            </div>
+                                            <label for="followup_very_severe5"><img src="../../static/main/index/assets/img/very_severe.JPG" alt="" width="60"></label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+
+                    <script type="text/javascript">
+                        $(document).ready(function()
+                        {   
+                            $('#painscale5').hide();
+                            $('#submitNo').hide();
+                        
+                            $('#followupYes5').change(function()
+                            {
+                                if($('#followupYes5').is(':checked'))
+                                {
+                                    $('#painscale5').attr('required', true);
+                                    $('#painscale5').fadeIn('slow');                                    
+                                }
+                                
+                                else{
+                                    $('#painscale5').attr('required', false);
+                                    $('#painscale5').fadeOut('slow');
+                                }
+                            });
+                        
+                            $('#followupNo5').change(function()
+                            {
+                                if($('#followupNo5').is(':checked'))
+                                {
+                                    $('#painscale5').attr('required', false);
+                                    $('#painscale5').fadeOut('slow');
+                                }
+                        
+                            });
+
+                        });
+                            </script>
+            
+
+                            <br><br><br>
+<!-- ******************************************  Question 5  **************************************** -->
+
+
+
+
+<!-- ******************************************  Question 6  **************************************** -->
+                    <div class="shoulder_questions">
+                        <label for="shoulder_questions6">
+                        <h2 class="h4 mb-1">Are you experiencing disturbed sleep? (Pain around the shoulders at night)</h2>        
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="followupYes6"  name="shoulder_questions6" value="1" required>
+                            <label class="cursor-pointer font-italic d-block custom-control-label" for="followupYes6"><p class="mb-0">Yes</p>
+                            </label>
+                        </div>
+                                    
+                                    
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="followupNo6"  name="shoulder_questions6" value="0">
+                            <label class="cursor-pointer font-italic d-block custom-control-label" for="followupNo6"><p class="mb-0">No</p>
+                            </label>
+                        </div>
+                        </label>
+                    </div>
+
+
+                    <div class="painscale">
+                        <label for="painscale6">
+                            <div id="painscale6">
+                                <div class="card shadow border-0 mb-6">
+                                    <div class="card-body p-6">
+                                        <h2 class="h4 mb-1">From a scale of 1-10, how much discomfort are you experiencing?</h2>
+                                        <ul class="list-group">
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_mild6" type="radio"  value="25" name="painscale6">
+                                                    <label class="custom-control-label" for="followup_mild6">
+                                                        <p class="mb-0">1 - 2</p><span class="small font-italic text-muted">Mild Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_mild6"><img src="../../static/main/index/assets/img/mild.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_moderate6" type="radio" value="50" name="painscale6">
+                                                    <label class="custom-control-label" for="followup_moderate6">
+                                                        <p class="mb-0">3 - 5</p><span class="small font-italic text-muted">Moderate Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_moderate6"><img src="../../static/main/index/assets/img/moderate.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_severe6" type="radio"  value="75" name="painscale6">
+                                                    <label class="custom-control-label" for="followup_severe6">
+                                                        <p class="mb-0">6 - 8</p><span class="small font-italic text-muted">Severe Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_severe6"><img src="../../static/main/index/assets/img/severe.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_very_severe6" type="radio"  value="100" name="painscale6">
+                                                    <label class="custom-control-label" for="followup_very_severe6">
+                                                        <p class="mb-0">9 - 10</p><span class="small font-italic text-muted">Very Severe Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_very_severe6"><img src="../../static/main/index/assets/img/very_severe.JPG" alt="" width="60"></label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+
+                        <script type="text/javascript">
+                            $(document).ready(function()
+                            {   
+                                $('#painscale6').hide();
+                                $('#submitNo').hide();
+                            
+                                $('#followupYes6').change(function()
+                                {
+                                    if($('#followupYes6').is(':checked'))
+                                    {
+                                        $('#painscale6').attr('required', true);
+                                        $('#painscale6').fadeIn('slow');
+                                        
+                                    }
+                                    
+                                    else{
+                                        $('#painscale6').attr('required', false);
+                                        $('#painscale6').fadeOut('slow');
+                                    }
+                                });
+                            
+                                $('#followupNo6').change(function()
+                                {
+                                    if($('#followupNo6').is(':checked'))
+                                    {
+                                        $('#painscale6').attr('required', false);
+                                        $('#painscale6').fadeOut('slow');
+                                    }
+                            
+                                });
+                            
+                            });
+                                </script>
+
+
+                                <br><br><br>
+<!-- ******************************************  Question 6  **************************************** -->
+
+
+
+
+<!-- ******************************************  Question 7  **************************************** -->
+                    <div class="shoulder_questions">
+                        <label for="shoulder_questions7">
+                        <h2 class="h4 mb-1">Are you experiencing clicking or crackling sound?</h2>        
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="followupYes7"  name="shoulder_questions7" value="1" required>
+                            <label class="cursor-pointer font-italic d-block custom-control-label" for="followupYes7"><p class="mb-0">Yes</p>
+                            </label>
+                        </div>
+                                    
+                                    
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="followupNo7"  name="shoulder_questions7" value="0">
+                            <label class="cursor-pointer font-italic d-block custom-control-label" for="followupNo7"><p class="mb-0">No</p>
+                            </label>
+                        </div>
+                        </label>
+                    </div>
+
+
+                    <div class="painscale">
+                        <label for="painscale7">
+                            <div id="painscale7">
+                                <div class="card shadow border-0 mb-7">
+                                    <div class="card-body p-7">
+                                        <h2 class="h4 mb-1">From a scale of 1-10, how much discomfort are you experiencing?</h2>
+                                        <ul class="list-group">
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_mild7" type="radio"  value="25" name="painscale7">
+                                                    <label class="custom-control-label" for="followup_mild7">
+                                                        <p class="mb-0">1 - 2</p><span class="small font-italic text-muted">Mild Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_mild7"><img src="../../static/main/index/assets/img/mild.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_moderate7" type="radio" value="50" name="painscale7">
+                                                    <label class="custom-control-label" for="followup_moderate7">
+                                                        <p class="mb-0">3 - 5</p><span class="small font-italic text-muted">Moderate Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_moderate7"><img src="../../static/main/index/assets/img/moderate.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_severe7" type="radio"  value="75" name="painscale7">
+                                                    <label class="custom-control-label" for="followup_severe7">
+                                                        <p class="mb-0">6 - 8</p><span class="small font-italic text-muted">Severe Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_severe7"><img src="../../static/main/index/assets/img/severe.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_very_severe7" type="radio"  value="100" name="painscale7">
+                                                    <label class="custom-control-label" for="followup_very_severe7">
+                                                        <p class="mb-0">9 - 10</p><span class="small font-italic text-muted">Very Severe Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_very_severe7"><img src="../../static/main/index/assets/img/very_severe.JPG" alt="" width="60"></label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+
+                        <script type="text/javascript">
+                            $(document).ready(function()
+                            {   
+                                $('#painscale7').hide();
+                                $('#submitNo').hide();
+                            
+                                $('#followupYes7').change(function()
+                                {
+                                    if($('#followupYes7').is(':checked'))
+                                    {
+                                        $('#painscale7').attr('required', true);
+                                        $('#painscale7').fadeIn('slow');
+                                        
+                                    }
+                                    
+                                    else{
+                                        $('#painscale7').attr('required', false);
+                                        $('#painscale7').fadeOut('slow');
+                                    }
+                                });
+                            
+                                $('#followupNo7').change(function()
+                                {
+                                    if($('#followupNo7').is(':checked'))
+                                    {
+                                        $('#painscale7').attr('required', false);
+                                        $('#painscale7').fadeOut('slow');
+                                    }
+                            
+                                });
+                            
+                            });
+                                </script>
+
+
+                                <br><br><br>
+<!-- ******************************************  Question 7  **************************************** -->
+
+
+
+
+<!-- ******************************************  Question 8  **************************************** -->
+                    <div class="shoulder_questions">
+                        <label for="shoulder_questions8">
+                        <h2 class="h4 mb-1">Are you experiencing instability in the affected shoulder? (sensation that the shoulder is catching)</h2>        
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="followupYes8"  name="shoulder_questions8" value="1" required>
+                            <label class="cursor-pointer font-italic d-block custom-control-label" for="followupYes8"><p class="mb-0">Yes</p>
+                            </label>
+                        </div>
+                                    
+                                    
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="followupNo8"  name="shoulder_questions8" value="0">
+                            <label class="cursor-pointer font-italic d-block custom-control-label" for="followupNo8"><p class="mb-0">No</p>
+                            </label>
+                        </div>
+                        </label>
+                    </div>
+
+
+                    <div class="painscale">
+                        <label for="painscale8">
+                            <div id="painscale8">
+                                <div class="card shadow border-0 mb-8">
+                                    <div class="card-body p-8">
+                                        <h2 class="h4 mb-1">From a scale of 1-10, how much discomfort are you experiencing?</h2>
+                                        <ul class="list-group">
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_mild8" type="radio"  value="25" name="painscale8">
+                                                    <label class="custom-control-label" for="followup_mild8">
+                                                        <p class="mb-0">1 - 2</p><span class="small font-italic text-muted">Mild Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_mild8"><img src="../../static/main/index/assets/img/mild.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_moderate8" type="radio" value="50" name="painscale8">
+                                                    <label class="custom-control-label" for="followup_moderate8">
+                                                        <p class="mb-0">3 - 5</p><span class="small font-italic text-muted">Moderate Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_moderate8"><img src="../../static/main/index/assets/img/moderate.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_severe8" type="radio"  value="75" name="painscale8">
+                                                    <label class="custom-control-label" for="followup_severe8">
+                                                        <p class="mb-0">6 - 8</p><span class="small font-italic text-muted">Severe Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_severe8"><img src="../../static/main/index/assets/img/severe.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_very_severe8" type="radio"  value="100" name="painscale8">
+                                                    <label class="custom-control-label" for="followup_very_severe8">
+                                                        <p class="mb-0">9 - 10</p><span class="small font-italic text-muted">Very Severe Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_very_severe8"><img src="../../static/main/index/assets/img/very_severe.JPG" alt="" width="60"></label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+
+                        <script type="text/javascript">
+                            $(document).ready(function()
+                            {   
+                                $('#painscale8').hide();
+                                $('#submitNo').hide();
+                            
+                                $('#followupYes8').change(function()
+                                {
+                                    if($('#followupYes8').is(':checked'))
+                                    {
+                                        $('#painscale8').attr('required', true);
+                                        $('#painscale8').fadeIn('slow');
+                                        
+                                    }
+                                    
+                                    else{
+                                        $('#painscale8').attr('required', false);
+                                        $('#painscale8').fadeOut('slow');
+                                    }
+                                });
+                            
+                                $('#followupNo8').change(function()
+                                {
+                                    if($('#followupNo8').is(':checked'))
+                                    {
+                                        $('#painscale8').attr('required', false);
+                                        $('#painscale8').fadeOut('slow');
+                                    }
+                            
+                                });
+
+                            });
+                                </script>
+
+
+                                <br><br><br>
+<!-- ******************************************  Question 8  **************************************** -->
+
+
+
+
+<!-- ******************************************  Question 9  **************************************** -->
+                    <div class="shoulder_questions"> 
+                        <label for="shoulder_questions9">
+                        <h2 class="h4 mb-1">Are you experiencing swelling and bruising around the shoulders?</h2>        
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="followupYes9"  name="shoulder_questions9" value="1" required>
+                            <label class="cursor-pointer font-italic d-block custom-control-label" for="followupYes9"><p class="mb-0">Yes</p>
+                            </label>
+                        </div>
+                                    
+                                    
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="followupNo9"  name="shoulder_questions9" value="0">
+                            <label class="cursor-pointer font-italic d-block custom-control-label" for="followupNo9"><p class="mb-0">No</p>
+                            </label>
+                        </div>
+                        </label>
+                    </div>
+
+
+                    <div class="painscale">
+                        <label for="painscale9">
+                            <div id="painscale9">
+                                <div class="card shadow border-0 mb-9">
+                                    <div class="card-body p-9">
+                                        <h2 class="h4 mb-1">From a scale of 1-10, how much discomfort are you experiencing?</h2>
+                                        <ul class="list-group">
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_mild9" type="radio"  value="25" name="painscale9">
+                                                    <label class="custom-control-label" for="followup_mild9">
+                                                        <p class="mb-0">1 - 2</p><span class="small font-italic text-muted">Mild Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_mild9"><img src="../../static/main/index/assets/img/mild.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_moderate9" type="radio" value="50" name="painscale9">
+                                                    <label class="custom-control-label" for="followup_moderate9">
+                                                        <p class="mb-0">3 - 5</p><span class="small font-italic text-muted">Moderate Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_moderate9"><img src="../../static/main/index/assets/img/moderate.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_severe9" type="radio"  value="75" name="painscale9">
+                                                    <label class="custom-control-label" for="followup_severe9">
+                                                        <p class="mb-0">6 - 8</p><span class="small font-italic text-muted">Severe Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_severe9"><img src="../../static/main/index/assets/img/severe.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_very_severe9" type="radio"  value="100" name="painscale9">
+                                                    <label class="custom-control-label" for="followup_very_severe9">
+                                                        <p class="mb-0">9 - 10</p><span class="small font-italic text-muted">Very Severe Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_very_severe9"><img src="../../static/main/index/assets/img/very_severe.JPG" alt="" width="60"></label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+
+                        <script type="text/javascript">
+                            $(document).ready(function()
+                            {   
+                                $('#painscale9').hide();
+                                $('#submitNo').hide();
+                            
+                                $('#followupYes9').change(function()
+                                {
+                                    if($('#followupYes9').is(':checked'))
+                                    {
+                                        $('#painscale9').attr('required', true);
+                                        $('#painscale9').fadeIn('slow');
+                                        
+                                    }
+                                    
+                                    else{
+                                        $('#painscale2').attr('required', false);
+                                        $('#painscale9').fadeOut('slow');
+                                        $('#submitNo').fadeIn('slow');
+                                    }
+                                });
+                            
+                                $('#followupNo9').change(function()
+                                {
+                                    if($('#followupNo9').is(':checked'))
+                                    {
+                                        $('#painscale9').fadeOut('slow');
+                                        $('#submitNo').fadeIn('slow');
+                                    }
+                            
+                                });
+                            
+                                $('#followup_mild9').change(function()
+                                {
+                                    if($('#followup_mild9').is(':checked'))
+                                    {
+                                        $('#submitNo').fadeIn('slow');
+                                    }
+                                });
+                            
+                                $('#followup_moderate9').change(function()
+                                {
+                                    if($('#followup_moderate9').is(':checked'))
+                                    {
+                                        $('#submitNo').fadeIn('slow');
+                                    }
+                                });
+                            
+                                $('#followup_severe9').change(function()
+                                {
+                                    if($('#followup_severe9').is(':checked'))
+                                    {
+                                        $('#submitNo').fadeIn('slow');
+                                    }
+                                });
+                            
+                                $('#followup_very_severe9').change(function()
+                                {
+                                    if($('#followup_very_severe9').is(':checked'))
+                                    {
+                                        $('#submitNo').fadeIn('slow');
+                                    }
+                                });
+                            
+                            });
+                                </script>
+
+
+                                <br><br><br>
+<!-- ******************************************  Question 9  **************************************** -->
+
+
+
+
+<!-- ******************************************  Question 10  **************************************** -->
+                    <div class="shoulder_questions"> 
+                        <label for="shoulder_questions10">
+                        <h2 class="h4 mb-1">Are you experiencing difficulty and severe pain when moving the shoulder?</h2>        
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="followupYes10"  name="shoulder_questions10" value="1" required>
+                            <label class="cursor-pointer font-italic d-block custom-control-label" for="followupYes10"><p class="mb-0">Yes</p>
+                            </label>
+                        </div>
+                                    
+                                    
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="followupNo10"  name="shoulder_questions10" value="0">
+                            <label class="cursor-pointer font-italic d-block custom-control-label" for="followupNo10"><p class="mb-0">No</p>
+                            </label>
+                        </div>
+                        </label>
+                    </div>
+
+
+                    <div class="painscale">
+                        <label for="painscale10">
+                            <div id="painscale10">
+                                <div class="card shadow border-0 mb-10">
+                                    <div class="card-body p-10">
+                                        <h2 class="h4 mb-1">From a scale of 1-10, how much discomfort are you experiencing?</h2>
+                                        <ul class="list-group">
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_mild10" type="radio"  value="25" name="painscale10">
+                                                    <label class="custom-control-label" for="followup_mild10">
+                                                        <p class="mb-0">1 - 2</p><span class="small font-italic text-muted">Mild Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_mild10"><img src="../../static/main/index/assets/img/mild.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_moderate10" type="radio" value="50" name="painscale10">
+                                                    <label class="custom-control-label" for="followup_moderate10">
+                                                        <p class="mb-0">3 - 5</p><span class="small font-italic text-muted">Moderate Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_moderate10"><img src="../../static/main/index/assets/img/moderate.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_severe10" type="radio"  value="75" name="painscale10">
+                                                    <label class="custom-control-label" for="followup_severe10">
+                                                        <p class="mb-0">6 - 8</p><span class="small font-italic text-muted">Severe Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_severe10"><img src="../../static/main/index/assets/img/severe.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_very_severe10" type="radio"  value="100" name="painscale10">
+                                                    <label class="custom-control-label" for="followup_very_severe10">
+                                                        <p class="mb-0">9 - 10</p><span class="small font-italic text-muted">Very Severe Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_very_severe10"><img src="../../static/main/index/assets/img/very_severe.JPG" alt="" width="60"></label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+
+                        <script type="text/javascript">
+                            $(document).ready(function()
+                            {   
+                                $('#painscale10').hide();
+                                $('#submitNo').hide();
+                            
+                                $('#followupYes10').change(function()
+                                {
+                                    if($('#followupYes10').is(':checked'))
+                                    {
+                                        $('#painscale10').attr('required', true);
+                                        $('#painscale10').fadeIn('slow');
+                                        
+                                    }
+                                    
+                                    else{
+                                        $('#painscale10').attr('required', false);
+                                        $('#painscale10').fadeOut('slow');
+                                        $('#submitNo').fadeIn('slow');
+                                    }
+                                });
+                            
+                                $('#followupNo10').change(function()
+                                {
+                                    if($('#followupNo10').is(':checked'))
+                                    {
+                                        $('#painscale10').fadeOut('slow');
+                                        $('#submitNo').fadeIn('slow');
+                                    }
+                            
+                                });
+                            
+                                $('#followup_mild10').change(function()
+                                {
+                                    if($('#followup_mild10').is(':checked'))
+                                    {
+                                        $('#submitNo').fadeIn('slow');
+                                    }
+                                });
+                            
+                                $('#followup_moderate10').change(function()
+                                {
+                                    if($('#followup_moderate10').is(':checked'))
+                                    {
+                                        $('#submitNo').fadeIn('slow');
+                                    }
+                                });
+                            
+                                $('#followup_severe10').change(function()
+                                {
+                                    if($('#followup_severe10').is(':checked'))
+                                    {
+                                        $('#submitNo').fadeIn('slow');
+                                    }
+                                });
+                            
+                                $('#followup_very_severe10').change(function()
+                                {
+                                    if($('#followup_very_severe10').is(':checked'))
+                                    {
+                                        $('#submitNo').fadeIn('slow');
+                                    }
+                                });
+                            
+                            });
+                                </script>
+
+
+                                <br><br><br>
+<!-- ******************************************  Question 10  **************************************** -->
+
+
+
+<!-- ******************************************  Question 11  **************************************** -->
+                    <div class="shoulder_questions"> 
+                        <label for="shoulder_questions11">
+                        <h2 class="h4 mb-1">Do you feel that your shoulder is out of place? (visible deformity of the shoulder)</h2>        
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="followupYes11"  name="shoulder_questions11" value="1" required>
+                            <label class="cursor-pointer font-italic d-block custom-control-label" for="followupYes11"><p class="mb-0">Yes</p>
+                            </label>
+                        </div>
+                                    
+                                    
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="followupNo11"  name="shoulder_questions11" value="0">
+                            <label class="cursor-pointer font-italic d-block custom-control-label" for="followupNo11"><p class="mb-0">No</p>
+                            </label>
+                        </div>
+                        </label>
+                    </div>
+
+
+                    <div class="painscale">
+                        <label for="painscale11">
+                            <div id="painscale11">
+                                <div class="card shadow border-0 mb-10">
+                                    <div class="card-body p-10">
+                                        <h2 class="h4 mb-1">From a scale of 1-10, how much discomfort are you experiencing?</h2>
+                                        <ul class="list-group">
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_mild11" type="radio"  value="25" name="painscale11">
+                                                    <label class="custom-control-label" for="followup_mild11">
+                                                        <p class="mb-0">1 - 2</p><span class="small font-italic text-muted">Mild Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_mild11"><img src="../../static/main/index/assets/img/mild.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_moderate11" type="radio" value="50" name="painscale11">
+                                                    <label class="custom-control-label" for="followup_moderate11">
+                                                        <p class="mb-0">3 - 5</p><span class="small font-italic text-muted">Moderate Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_moderate11"><img src="../../static/main/index/assets/img/moderate.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_severe11" type="radio"  value="75" name="painscale11">
+                                                    <label class="custom-control-label" for="followup_severe11">
+                                                        <p class="mb-0">6 - 8</p><span class="small font-italic text-muted">Severe Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_severe11"><img src="../../static/main/index/assets/img/severe.JPG" alt="" width="60"></label>
+                                            </li>
+
+                                            <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" id="followup_very_severe11" type="radio"  value="100" name="painscale11">
+                                                    <label class="custom-control-label" for="followup_very_severe11">
+                                                        <p class="mb-0">9 - 10</p><span class="small font-italic text-muted">Very Severe Pain</span>
+                                                    </label>
+                                                </div>
+                                                <label for="followup_very_severe11"><img src="../../static/main/index/assets/img/very_severe.JPG" alt="" width="60"></label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+
+                        <script type="text/javascript">
+                            $(document).ready(function()
+                            {   
+                                $('#painscale11').hide();
+                                $('#submitNo').hide();
+                            
+                                $('#followupYes11').change(function()
+                                {
+                                    if($('#followupYes11').is(':checked'))
+                                    {
+                                        $('#painscale11').attr('required', true);
+                                        $('#painscale11').fadeIn('slow');
+                                        
+                                    }
+                                    
+                                    else{
+                                        $('#painscale11').attr('required', false);
+                                        $('#painscale11').fadeOut('slow');
+                                        $('#submitNo').fadeIn('slow');
+                                    }
+                                });
+                            
+                                $('#followupNo11').change(function()
+                                {
+                                    if($('#followupNo11').is(':checked'))
+                                    {
+                                        $('#painscale11').fadeOut('slow');
+                                        $('#submitNo').fadeIn('slow');
+                                    }
+                            
+                                });
+                            
+                                $('#followup_mild11').change(function()
+                                {
+                                    if($('#followup_mild11').is(':checked'))
+                                    {
+                                        $('#submitNo').fadeIn('slow');
+                                    }
+                                });
+                            
+                                $('#followup_moderate11').change(function()
+                                {
+                                    if($('#followup_moderate11').is(':checked'))
+                                    {
+                                        $('#submitNo').fadeIn('slow');
+                                    }
+                                });
+                            
+                                $('#followup_severe11').change(function()
+                                {
+                                    if($('#followup_severe11').is(':checked'))
+                                    {
+                                        $('#submitNo').fadeIn('slow');
+                                    }
+                                });
+                            
+                                $('#followup_very_severe11').change(function()
+                                {
+                                    if($('#followup_very_severe11').is(':checked'))
+                                    {
+                                        $('#submitNo').fadeIn('slow');
+                                    }
+                                });
+                            
+                            });
+                                </script>
+
+
+                                <br><br><br>
+<!-- ******************************************  Question 11  **************************************** -->
+
+                <button type="Submit" class="btn btn-primary btn-block" id="submitNo">Submit</button>
+                </form>
+            </div>
+            
+        </div>
+
+        <div style="margin-top: 100px;"></div>
+    </div>      
+        
+    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="{% static 'main/index/assets/js/gijgo.min.js' %}" charset="utf-8"></script>
+    <script src="{% static 'main/index/assets/js/input-spinner.js' %}"></script>
 </html>

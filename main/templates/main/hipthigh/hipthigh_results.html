@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ClickCare</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+        <h1>Results</h1>
+        <p>It is possible that you may be diagnosed with:</p>
+
+        {% if first == 'Hip Strain/Sprain' %}
+
+            {% if hipthigh_scoreA > 0 and hipthigh_scoreA <= 25 %}
+            <br>
+            <p>Mild {{ first }}</p>
+            {% elif hipthigh_scoreA > 25 and hipthigh_scoreA <= 50 %}
+            <br>
+            <p>Moderate {{ first }}</p>
+            {% elif hipthigh_scoreA > 50 and hipthigh_scoreA <= 75 %}
+            <br>
+            <p>Severe {{ first }}</p>
+            {% elif hipthigh_scoreA > 75 and hipthigh_scoreA <= 100 %}
+            <br>
+            <p>Very Severe {{ first }}</p>
+            {% endif %}
+            
+        {% endif %}
+
+        {% if second == 'Hip Dislocation' %}
+
+            {% if hipthigh_scoreB > 0 and hipthigh_scoreB <= 25 %}
+            <br>
+            <p>Mild {{ second }}</p>
+            {% elif hipthigh_scoreB > 25 and hipthigh_scoreB <= 50 %}
+            <br>
+            <p>Moderate {{ second }}</p>
+            {% elif hipthigh_scoreB > 50 and hipthigh_scoreB <= 75 %}
+            <br>
+            <p>Severe {{ second }}</p>
+            {% elif hipthigh_scoreB > 75 and hipthigh_scoreB <= 100 %}
+            <br>
+            <p>Very Severe {{ second }}</p>
+            {% endif %}
+
+        {% endif %}
+
+        {% if third == 'Hamstring Muscle Injury' %}
+
+            {% if hipthigh_scoreC > 0 and hipthigh_scoreC <= 25 %}
+            <br>
+            <p>Mild {{ third }}</p>
+            {% elif hipthigh_scoreC > 25 and hipthigh_scoreC <= 50 %}
+            <br>
+            <p>Moderate {{ third }}</p>
+            {% elif hipthigh_scoreC > 50 and hipthigh_scoreC <= 75 %}
+            <br>
+            <p>Severe {{ third }}</p>
+            {% elif hipthigh_scoreC > 75 and hipthigh_scoreC <= 100 %}
+            <br>
+            <p>Very Severe {{ third }}</p>
+            {% endif %}
+            
+        {% endif %}
+
+        {% if fourth == 'Ischial Bursitis' %}
+
+            {% if hipthigh_scoreD > 0 and hipthigh_scoreD <= 25 %}
+            <br>
+            <p>Mild {{ fourth }}</p>
+            {% elif hipthigh_scoreD > 25 and hipthigh_scoreD <= 50 %}
+            <br>
+            <p>Moderate {{ fourth }}</p>
+            {% elif hipthigh_scoreD > 50 and hipthigh_scoreD <= 75 %}
+            <br>
+            <p>Severe {{ fourth }}</p>
+            {% elif hipthigh_scoreD > 75 and hipthigh_scoreD <= 100 %}
+            <br>
+            <p>Very Severe {{ fourth }}</p>
+            {% endif %}
+            
+        {% endif %}
+
+        {% if fifth == 'Hip (Acetabular) Labral Tear' %}
+
+            {% if hipthigh_scoreE > 0 and hipthigh_scoreE <= 25 %}
+            <br>
+            <p>Mild {{ fifth }}</p>
+            {% elif hipthigh_scoreE > 25 and hipthigh_scoreE <= 50 %}
+            <br>
+            <p>Moderate {{ fifth }}</p>
+            {% elif hipthigh_scoreE > 50 and hipthigh_scoreE <= 75 %}
+            <br>
+            <p>Severe {{ fifth }}</p>
+            {% elif hipthigh_scoreE > 75 and hipthigh_scoreE <= 100 %}
+            <br>
+            <p>Very Severe {{ fifth }}</p>
+            {% endif %}
+            
+        {% endif %}
+        
+      </div>
+    </div>
+
+</body>
+</html>
+
+

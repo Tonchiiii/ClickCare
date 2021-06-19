@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ClickCare</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+        <h1>Results</h1>
+        <p>It is possible that you may be diagnosed with:</p> 
+        {% if first == 'ACL (Anterior Cruciate Ligament) Tear' %}
+
+            {% if scoreA > 0 and scoreA <= 25 %}
+            <br>
+            <p>Mild {{ first }}</p>
+            {% elif scoreA > 25 and scoreA <= 50 %}
+            <br>
+            <p>Moderate {{ first }}</p>
+            {% elif scoreA > 50 and scoreA <= 75 %}
+            <br>
+            <p>Severe {{ first }}</p>
+            {% elif scoreA > 75 and scoreA <= 100 %}
+            <br>
+            <p>Very Severe {{ first }}</p>
+            {% endif %}
+            
+        {% endif %}
+        
+        {% if second == 'Meniscus Tear' %}
+
+            {% if scoreB > 0 and scoreB <= 25 %}
+            <br>
+            <p>Mild {{ second }}</p>
+            {% elif scoreB > 25 and scoreB <= 50 %}
+            <br>
+            <p>Moderate {{ second }}</p>
+            {% elif scoreB > 50 and scoreB <= 75 %}
+            <br>
+            <p>Severe {{ second }}</p>
+            {% elif scoreB > 75 and scoreB <= 100 %}
+            <br>
+            <p>Very Severe {{ second }}</p>
+            {% endif %}
+            
+        {% endif %}
+
+        {% if third == 'Arthritis of the Knee' %}
+
+            {% if scoreC > 0 and scoreC <= 25 %}
+            <br>
+            <p>Mild {{ third }}</p>
+            {% elif scoreC > 25 and scoreC <= 50 %}
+            <br>
+            <p>Moderate {{ third }}</p>
+            {% elif scoreC > 50 and scoreC <= 75 %}
+            <br>
+            <p>Severe {{ third }}</p>
+            {% elif scoreC > 75 and scoreC <= 100 %}
+            <br>
+            <p>Very Severe {{ third }}</p>
+            {% endif %}
+            
+        {% endif %}
+
+      </div>
+    </div>
+
+</body>
+</html>
+
+

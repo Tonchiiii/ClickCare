@@ -1,0 +1,38 @@
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSE
+* ==========================================
+*
+*/
+.tab {
+    margin-left: 40px;
+}
+
+.text-small {
+    font-size: 0.9rem !important;
+}
+
+body {
+    min-height: 120vh;
+    position: relative;
+    background: url("images/flower.jpg") no-repeat right center;
+    background-size: cover;
+    backdrop-filter: blur(12px);
+}
+
+h1 {
+  text-shadow: 1px 1px 2px #000000;
+}
+
+h6 {
+  text-shadow: 0.5px 0.5px 1px #000000;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+#checkout{
+    display:none;
+}

@@ -17,11 +17,11 @@ body {
 }
 
 a {
-  color: #cc1616;
+  color: #1977cc;
 }
 
 a:hover {
-  color: #e82d2d;
+  color: #3291e6;
   text-decoration: none;
 }
 
@@ -47,13 +47,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 24px;
   width: 40px;
   height: 40px;
-  background: #cc1616;
+  background: #1977cc;
   color: #fff;
   transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-  background: #e72323;
+  background: #1977cc;
   color: #fff;
 }
 
@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #cc1616;
+  border: 6px solid #1977cc;
   border-top-color: #efefef;
   border-radius: 50%;
   width: 60px;
@@ -137,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #topbar .contact-info i {
-  color: #cc1616;
+  color: #1977cc;
   padding-right: 4px;
 }
 
@@ -243,7 +243,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu > ul > li:hover, .nav-menu .active {
-  background: #cc1616;
+  background: #1977cc;
 }
 
 .nav-menu .drop-down ul {
@@ -280,7 +280,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
-  color: #e82d2d;
+  color: #3291e6;
 }
 
 .nav-menu .drop-down > a:after {
@@ -375,7 +375,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #e82d2d;
+  color: #3291e6;
   text-decoration: none;
 }
 
@@ -445,7 +445,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   width: 64px;
   height: 64px;
-  background: #cc1616;
+  background: #1977cc;
   transition: all .3s ease-out 0s;
   display: flex;
   align-items: center;
@@ -488,8 +488,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .category .icon-box:hover {
-  background: #cc1616;
-  border-color: #cc1616;
+  background: #1977cc;
+  border-color: #1977cc;
   padding: 50px 20px 70px 20px;
 }
 
@@ -498,11 +498,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .category .icon-box:hover .icon i {
-  color: #cc1616;
+  color: #1977cc;
 }
 
 .category .icon-box:hover .icon::before {
-  background: #e82d2d;
+  background: #3291e6;
 }
 
 .category .icon-box:hover h4 a, .category .icon-box:hover p {

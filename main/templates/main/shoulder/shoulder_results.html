@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ClickCare</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+        <h1>Results</h1>
+        <p>It is possible that you may be diagnosed with:</p>
+
+        {% if first == 'Rotator Cuff Tendinitis' %}
+
+            {% if shoulder_scoreA > 0 and shoulder_scoreA <= 25 %}
+            <br>
+            <p>Mild {{ first }}</p>
+            {% elif shoulder_scoreA > 25 and shoulder_scoreA <= 50 %}
+            <br>
+            <p>Moderate {{ first }}</p>
+            {% elif shoulder_scoreA > 50 and shoulder_scoreA <= 75 %}
+            <br>
+            <p>Severe {{ first }}</p>
+            {% elif shoulder_scoreA > 75 and shoulder_scoreA <= 100 %}
+            <br>
+            <p>Very Severe {{ first }}</p>
+            {% endif %}
+            
+        {% endif %}
+
+        {% if second == 'Frozen Shoulder' %}
+
+            {% if shoulder_scoreB > 0 and shoulder_scoreB <= 25 %}
+            <br>
+            <p>Mild {{ second }}</p>
+            {% elif shoulder_scoreB > 25 and shoulder_scoreB <= 50 %}
+            <br>
+            <p>Moderate {{ second }}</p>
+            {% elif shoulder_scoreB > 50 and shoulder_scoreB <= 75 %}
+            <br>
+            <p>Severe {{ second }}</p>
+            {% elif shoulder_scoreB > 75 and shoulder_scoreB <= 100 %}
+            <br>
+            <p>Very Severe {{ second }}</p>
+            {% endif %}
+            
+        {% endif %}
+
+        {% if third == 'Cervical (shoulder) Spondylosis' %}
+
+            {% if shoulder_scoreC > 0 and shoulder_scoreC <= 25 %}
+            <br>
+            <p>Mild {{ third }}</p>
+            {% elif shoulder_scoreC > 25 and shoulder_scoreC <= 50 %}
+            <br>
+            <p>Moderate {{ third }}</p>
+            {% elif shoulder_scoreC > 50 and shoulder_scoreC <= 75 %}
+            <br>
+            <p>Severe {{ third }}</p>
+            {% elif shoulder_scoreC > 75 and shoulder_scoreC <= 100 %}
+            <br>
+            <p>Very Severe {{ third }}</p>
+            {% endif %}
+            
+        {% endif %}
+
+        {% if fourth == 'Cervical (shoulder) Herniated Disc' %}
+
+            {% if shoulder_scoreD > 0 and shoulder_scoreD <= 25 %}
+            <br>
+            <p>Mild {{ fourth }}</p>
+            {% elif shoulder_scoreD > 25 and shoulder_scoreD <= 50 %}
+            <br>
+            <p>Moderate {{ fourth }}</p>
+            {% elif shoulder_scoreD > 50 and shoulder_scoreD <= 75 %}
+            <br>
+            <p>Severe {{ fourth }}</p>
+            {% elif shoulder_scoreD > 75 and shoulder_scoreD <= 100 %}
+            <br>
+            <p>Very Severe {{ fourth }}</p>
+            {% endif %}
+            
+        {% endif %}
+
+        {% if fifth == 'Broken shoulder' %}
+
+            {% if shoulder_scoreE > 0 and shoulder_scoreE <= 25 %}
+            <br>
+            <p>Mild {{ fifth }}</p>
+            {% elif shoulder_scoreE > 25 and shoulder_scoreE <= 50 %}
+            <br>
+            <p>Moderate {{ fifth }}</p>
+            {% elif shoulder_scoreE > 50 and shoulder_scoreE <= 75 %}
+            <br>
+            <p>Severe {{ fifth }}</p>
+            {% elif shoulder_scoreE > 75 and shoulder_scoreE <= 100 %}
+            <br>
+            <p>Very Severe {{ fifth }}</p>
+            {% endif %}
+            
+        {% endif %}
+        
+      </div>
+    </div>
+
+</body>
+</html>
+
+
